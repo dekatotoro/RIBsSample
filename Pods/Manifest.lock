@@ -1,0 +1,51 @@
+PODS:
+  - APIKit (4.0.0):
+    - Result (~> 4.0)
+  - Kingfisher (4.10.1)
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
+  - Result (4.1.0)
+  - RIBs (0.9.1):
+    - RxSwift (~> 4.0)
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
+  - SpringIndicator (4.0.1)
+
+DEPENDENCIES:
+  - APIKit (~> 4.0.0)
+  - Kingfisher (~> 4.10.1)
+  - "NSObject+Rx"
+  - RIBs (~> 0.9.0)
+  - RxCocoa (~> 4.4)
+  - RxSwift (~> 4.4)
+  - SpringIndicator (~> 4.0.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - APIKit
+    - Kingfisher
+    - "NSObject+Rx"
+    - Result
+    - RIBs
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+    - SpringIndicator
+
+SPEC CHECKSUMS:
+  APIKit: 23ddce4be7eccd746d2ab3c62713cd80d5846d5a
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RIBs: 879184fbca567425c488d6b3d14a9c5abfbf9d47
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
+  SpringIndicator: 96eb6158a9dc94c1623d84130639a52225f04056
+
+PODFILE CHECKSUM: 9c4a09c3249e54207f7635cbf4ccc47d76d04375
+
+COCOAPODS: 1.5.3
