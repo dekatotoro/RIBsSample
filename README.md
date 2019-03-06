@@ -50,7 +50,7 @@ Warning: you can make up to 30 requests per minute
 
 
 ## Requirements
-Requires Swift4.2 and Xcode8 and iOS 10.1 or later.  
+Requires Swift4.2 and Xcode10.1 and iOS 9.0 or later.  
 
 
 
