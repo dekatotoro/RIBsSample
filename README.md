@@ -15,7 +15,7 @@
 
 This is a sample that was implemented using RIBs framework in iOS.
 
-[ber's cross-platform mobile architecture framework](https://github.com/uber/RIBs)
+Uber's cross-platform mobile architecture framework](https://github.com/uber/RIBs)
 
 #### It is a simple application that the user search of github.
 
