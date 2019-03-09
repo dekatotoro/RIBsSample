@@ -1,4 +1,4 @@
-# RIBsSample
+# RIBs Sample
 
 ========================
 
@@ -13,16 +13,16 @@
 
 
 
-This is a sample that was implemented using RIBs framework in iOS.
+## This is a sample that was implemented using RIBs framework in iOS.
 
 [Uber's cross-platform mobile architecture framework](https://github.com/uber/RIBs)
 
-#### It is a simple application that the user search of github.
+### It is a simple application that the user search of github.
 
-![sample](Screenshots/screenshots.gif)
+| Screenshot | RIBs tree |
+|:---:|:---:|
+| ![sample](Screenshots/screenshots.gif) | ![RIBs_tree](Screenshots/RIBs_tree.png) |
 
-#### RIBs tree is very simpole.
-![RIBs_tree](Screenshots/RIBs_tree.png)
 
 ## Setup
 #### Pod setup
