@@ -20,7 +20,7 @@ final class RootComponent: Component<RootDependency>, SearchDependency {
     fileprivate let rootViewController: RootViewController
 
     // SearchDependency
-    var gitHubAPI: GitHubAPI {
+    var gitHubAPI: GitHubAPIType {
         return shared { GitHubAPI() }
     }
 

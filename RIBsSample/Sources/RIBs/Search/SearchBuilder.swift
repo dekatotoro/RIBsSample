@@ -11,7 +11,7 @@ import RIBs
 protocol SearchDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
-    var gitHubAPI: GitHubAPI { get }
+    var gitHubAPI: GitHubAPIType { get }
 }
 
 final class SearchComponent: Component<SearchDependency> {
@@ -19,7 +19,7 @@ final class SearchComponent: Component<SearchDependency> {
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 
     // SearchDependency, DetailDependency
-    let gitHubAPI: GitHubAPI
+    let gitHubAPI: GitHubAPIType
 
     // DetailDependency
     // TODO: Test Implementation to pass dependency to child RIBs

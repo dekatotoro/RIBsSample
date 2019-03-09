@@ -28,11 +28,11 @@ class SearchStreamImpl: MutableSearchStream {
     private let _searchModel = BehaviorRelay<SearchModel<GitHubUser>>(value: SearchModel())
     let searchModel: Property<SearchModel<GitHubUser>>
 
-    private let gitHubAPI: GitHubAPI
+    private let gitHubAPI: GitHubAPIType
 
     private let disposeBag = DisposeBag()
 
-    init(gitHubAPI: GitHubAPI) {
+    init(gitHubAPI: GitHubAPIType) {
         self.gitHubAPI = gitHubAPI
         self.loading = Property<Bool>(_loading)
         self.searchModel = Property<SearchModel<GitHubUser>>(_searchModel)

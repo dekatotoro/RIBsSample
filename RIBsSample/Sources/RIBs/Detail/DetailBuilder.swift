@@ -13,7 +13,7 @@ protocol DetailDependency: Dependency {
     // created by this RIB.
 
     // TODO: Test Implementation to pass dependency to this RIBs
-    var gitHubAPI: GitHubAPI { get }
+    var gitHubAPI: GitHubAPIType { get }
     var mutableSearchStream: MutableSearchStream { get }
 }
 

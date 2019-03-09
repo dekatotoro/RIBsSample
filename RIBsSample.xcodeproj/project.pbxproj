@@ -20,6 +20,8 @@
 		C557D6F420E9F0D60050BFD7 /* RIBsSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557D6F320E9F0D60050BFD7 /* RIBsSampleUITests.swift */; };
 		C557D73E20EA00BE0050BFD7 /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557D73D20EA00BE0050BFD7 /* URLHandler.swift */; };
 		C557D74220EA075F0050BFD7 /* LaunchWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557D74120EA075F0050BFD7 /* LaunchWorkflow.swift */; };
+		C5A6AE962233B6CC00EB5723 /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6AE952233B6CC00EB5723 /* GitHubRequest.swift */; };
+		C5A6AE982233B70E00EB5723 /* ApiResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A6AE972233B70E00EB5723 /* ApiResponseError.swift */; };
 		C5CE57BA222CE178009E555A /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CE57B6222CE178009E555A /* SearchRouter.swift */; };
 		C5CE57BC222CE178009E555A /* SearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CE57B8222CE178009E555A /* SearchBuilder.swift */; };
 		C5CE57BD222CE178009E555A /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CE57B9222CE178009E555A /* SearchInteractor.swift */; };
@@ -107,6 +109,8 @@
 		C557D6F520E9F0D60050BFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C557D73D20EA00BE0050BFD7 /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
 		C557D74120EA075F0050BFD7 /* LaunchWorkflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchWorkflow.swift; sourceTree = "<group>"; };
+		C5A6AE952233B6CC00EB5723 /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
+		C5A6AE972233B70E00EB5723 /* ApiResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseError.swift; sourceTree = "<group>"; };
 		C5CE57B6222CE178009E555A /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		C5CE57B8222CE178009E555A /* SearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilder.swift; sourceTree = "<group>"; };
 		C5CE57B9222CE178009E555A /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
@@ -321,12 +325,33 @@
 			path = Workflow;
 			sourceTree = "<group>";
 		};
+		C5A6AE992233BBDB00EB5723 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				C5A6AE952233B6CC00EB5723 /* GitHubRequest.swift */,
+				C5CE5822222CE923009E555A /* GitHubSearchUserRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		C5A6AE9A2233BC9600EB5723 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5CE581E222CE923009E555A /* GitHubLinkHeader.swift */,
+				C5CE583F222E7E6B009E555A /* GitHubSearchUser.swift */,
+				C5CE5841222E7EB7009E555A /* GitHubSearchUserResponse.swift */,
+				C5CE5821222CE923009E555A /* GitHubUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C5CE57B3222CE0C9009E555A /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				C5CE57B8222CE178009E555A /* SearchBuilder.swift */,
 				C5CE583D222E6CD3009E555A /* SearchCell.swift */,
 				C5CE57F6222CE3EA009E555A /* SearchCell.xib */,
+				C5CE5888222FA687009E555A /* SearchComponent+Detail.swift */,
 				C5CE57F4222CE3EA009E555A /* SearchInputView.swift */,
 				C5CE57F3222CE3EA009E555A /* SearchInputView.xib */,
 				C5CE57B9222CE178009E555A /* SearchInteractor.swift */,
@@ -336,7 +361,6 @@
 				C5CE581B222CE919009E555A /* SearchTableViewDataSource.swift */,
 				C5CE57DE222CE34D009E555A /* SearchViewController.storyboard */,
 				C5CE57DC222CE34D009E555A /* SearchViewController.swift */,
-				C5CE5888222FA687009E555A /* SearchComponent+Detail.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -352,14 +376,12 @@
 		C5CE5819222CE859009E555A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				C5A6AE9A2233BC9600EB5723 /* Model */,
+				C5A6AE992233BBDB00EB5723 /* Request */,
+				C5A6AE972233B70E00EB5723 /* ApiResponseError.swift */,
 				C5CE5820222CE923009E555A /* DecodableDataParser.swift */,
 				C5CE5843222E7F06009E555A /* GitHubAPI+SearchUser.swift */,
 				C5CE581F222CE923009E555A /* GitHubAPI.swift */,
-				C5CE581E222CE923009E555A /* GitHubLinkHeader.swift */,
-				C5CE583F222E7E6B009E555A /* GitHubSearchUser.swift */,
-				C5CE5822222CE923009E555A /* GitHubSearchUserRequest.swift */,
-				C5CE5841222E7EB7009E555A /* GitHubSearchUserResponse.swift */,
-				C5CE5821222CE923009E555A /* GitHubUser.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -618,6 +640,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A6AE982233B70E00EB5723 /* ApiResponseError.swift in Sources */,
 				C557D6D420E9F0D50050BFD7 /* AppDelegate.swift in Sources */,
 				C5CE5810222CE45A009E555A /* AppExtension.swift in Sources */,
 				C5CE57EE222CE3D9009E555A /* CellNibable.swift in Sources */,
@@ -631,9 +654,9 @@
 				C5CE5844222E7F06009E555A /* GitHubAPI+SearchUser.swift in Sources */,
 				C5CE5824222CE923009E555A /* GitHubAPI.swift in Sources */,
 				C5CE5823222CE923009E555A /* GitHubLinkHeader.swift in Sources */,
+				C5A6AE962233B6CC00EB5723 /* GitHubRequest.swift in Sources */,
 				C5CE5840222E7E6B009E555A /* GitHubSearchUser.swift in Sources */,
 				C5CE5827222CE923009E555A /* GitHubSearchUserRequest.swift in Sources */,
-				C5CE5889222FA687009E555A /* SearchComponent+Detail.swift in Sources */,
 				C5CE5842222E7EB7009E555A /* GitHubSearchUserResponse.swift in Sources */,
 				C5CE5826222CE923009E555A /* GitHubUser.swift in Sources */,
 				C557D74220EA075F0050BFD7 /* LaunchWorkflow.swift in Sources */,
@@ -651,6 +674,7 @@
 				C5CE582F222D3067009E555A /* RxHelper.swift in Sources */,
 				C5CE57BC222CE178009E555A /* SearchBuilder.swift in Sources */,
 				C5CE583E222E6CD3009E555A /* SearchCell.swift in Sources */,
+				C5CE5889222FA687009E555A /* SearchComponent+Detail.swift in Sources */,
 				C5CE57F8222CE3EA009E555A /* SearchInputView.swift in Sources */,
 				C5CE57BD222CE178009E555A /* SearchInteractor.swift in Sources */,
 				C5CE581C222CE919009E555A /* SearchModel.swift in Sources */,
@@ -672,9 +696,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C557D6E920E9F0D60050BFD7 /* RIBsSampleTests.swift in Sources */,
 				C5CE5874222FA13C009E555A /* SearchInteractorTests.swift in Sources */,
 				C5CE5875222FA13C009E555A /* SearchRouterTests.swift in Sources */,
-				C557D6E920E9F0D60050BFD7 /* RIBsSampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
